@@ -44,7 +44,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/codestalk.git
+git clone https://github.com/kushagragarg15/codestalk.git
 cd codestalk
 
 # Install dependencies
