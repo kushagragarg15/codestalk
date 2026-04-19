@@ -4,9 +4,9 @@ import { z } from "zod";
 const envSchema = z.object({
   PORT: z.coerce.number().default(4000),
   MONGODB_URI: z.string().min(1),
-  JWT_SECRET: z.string().min(16, "JWT_SECRET should be at least 16 chars"),
+  JWT_SECRET: z.string().min(16, "JWT_SECRET should be at least 16 chars").default("fallback-dev-secret-change-in-prod"),
   JWT_EXPIRES_IN: z.string().default("30d"),
-  CLIENT_ORIGIN: z.string().default("http://localhost:5173"),
+  CLIENT_ORIGIN: z.string().default("*"),
   /** Use alfa-leetcode-api REST (`alfa`) or LeetCode GraphQL directly (`graphql`). */
   LEETCODE_PROVIDER: z.enum(["alfa", "graphql"]).default("alfa"),
   /** Base URL for alfa-leetcode-api (no trailing slash). */
@@ -29,6 +29,8 @@ let cached: Env | null = null;
 
 export function loadEnv(): Env {
   if (cached) return cached;
+  // dotenv only needed locally — Vercel injects env vars directly
+  try { require("dotenv/config"); } catch {}
   const parsed = envSchema.safeParse(process.env);
   if (!parsed.success) {
     console.error(parsed.error.flatten().fieldErrors);

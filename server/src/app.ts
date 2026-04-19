@@ -20,7 +20,7 @@ export function createApp() {
   app.use(helmet());
   app.use(
     cors({
-      origin: env.CLIENT_ORIGIN.split(",").map((s) => s.trim()),
+      origin: env.CLIENT_ORIGIN === "*" ? true : env.CLIENT_ORIGIN.split(",").map((s) => s.trim()),
       credentials: true,
     })
   );
@@ -60,6 +60,3 @@ export function createApp() {
 
   return app;
 }
-
-// Serverless-compatible export (used by Vercel api/index.ts)
-export const appHandler = createApp();
