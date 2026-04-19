@@ -60,3 +60,6 @@ export function createApp() {
 
   return app;
 }
+
+// Serverless-compatible export (used by Vercel api/index.ts)
+export const appHandler = createApp();
