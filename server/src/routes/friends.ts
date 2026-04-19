@@ -1,10 +1,10 @@
 import { Router } from "express";
 import { z } from "zod";
-import { Friend } from "../models/Friend.js";
-import { requireAuth } from "../middleware/requireAuth.js";
-import { getProfile } from "../services/leetcodeService.js";
-import { buildFriendSnapshot } from "../services/friendSnapshot.js";
-import { badgesForStats, friendlyNudge } from "../services/gamification.js";
+import { Friend } from "../models/Friend";
+import { requireAuth } from "../middleware/requireAuth";
+import { getProfile } from "../services/leetcodeService";
+import { buildFriendSnapshot } from "../services/friendSnapshot";
+import { badgesForStats, friendlyNudge } from "../services/gamification";
 
 export const friendsRouter = Router();
 

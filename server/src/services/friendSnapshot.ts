@@ -9,7 +9,7 @@ import {
   parseSubmissionCalendar,
   startOfLocalDay,
   type RecentSubsPayload,
-} from "./leetcodeService.js";
+} from "./leetcodeService";
 
 export type FriendSnapshot = {
   username: string;

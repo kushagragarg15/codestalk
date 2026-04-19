@@ -1,5 +1,5 @@
-import { loadEnv } from "../config/env.js";
-import { getCached, setCached } from "./cacheService.js";
+import { loadEnv } from "../config/env";
+import { getCached, setCached } from "./cacheService";
 
 const LEETCODE_HEADERS: Record<string, string> = {
   "Content-Type": "application/json",

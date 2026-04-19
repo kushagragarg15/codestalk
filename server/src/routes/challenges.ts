@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { requireAuth } from "../middleware/requireAuth.js";
-import { Friend } from "../models/Friend.js";
-import { getDailyProblem, getProblems, getTrendingDiscussions } from "../services/leetcodeEnhanced.js";
-import { getAcceptedSubmissions } from "../services/leetcodeEnhanced.js";
+import { requireAuth } from "../middleware/requireAuth";
+import { Friend } from "../models/Friend";
+import { getDailyProblem, getProblems, getTrendingDiscussions } from "../services/leetcodeEnhanced";
+import { getAcceptedSubmissions } from "../services/leetcodeEnhanced";
 
 export const challengesRouter = Router();
 challengesRouter.use(requireAuth);

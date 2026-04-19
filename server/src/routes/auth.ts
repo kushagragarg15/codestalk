@@ -2,9 +2,9 @@ import { Router } from "express";
 import bcrypt from "bcryptjs";
 import jwt, { type SignOptions } from "jsonwebtoken";
 import { z } from "zod";
-import { loadEnv } from "../config/env.js";
-import { User } from "../models/User.js";
-import { requireAuth } from "../middleware/requireAuth.js";
+import { loadEnv } from "../config/env";
+import { User } from "../models/User";
+import { requireAuth } from "../middleware/requireAuth";
 
 const registerSchema = z.object({
   email: z.string().email(),

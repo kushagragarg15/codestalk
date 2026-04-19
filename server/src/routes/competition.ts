@@ -1,13 +1,13 @@
 import { Router } from "express";
-import { requireAuth } from "../middleware/requireAuth.js";
-import { Friend } from "../models/Friend.js";
+import { requireAuth } from "../middleware/requireAuth";
+import { Friend } from "../models/Friend";
 import {
   getUserBadges,
   getSkillStats,
   getLanguageStats,
   getContestHistory,
   getAcceptedSubmissions,
-} from "../services/leetcodeEnhanced.js";
+} from "../services/leetcodeEnhanced";
 
 export const competitionRouter = Router();
 competitionRouter.use(requireAuth);

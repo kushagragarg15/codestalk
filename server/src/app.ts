@@ -2,17 +2,17 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-import { loadEnv } from "./config/env.js";
-import { authRouter } from "./routes/auth.js";
-import { friendsRouter } from "./routes/friends.js";
-import { leetcodeRouter } from "./routes/leetcode.js";
-import { leaderboardRouter } from "./routes/leaderboard.js";
-import { contestsRouter } from "./routes/contests.js";
-import { compareRouter } from "./routes/compare.js";
-import { insightsRouter } from "./routes/insights.js";
-import { dashboardRouter } from "./routes/dashboard.js";
-import { competitionRouter } from "./routes/competition.js";
-import { challengesRouter } from "./routes/challenges.js";
+import { loadEnv } from "./config/env";
+import { authRouter } from "./routes/auth";
+import { friendsRouter } from "./routes/friends";
+import { leetcodeRouter } from "./routes/leetcode";
+import { leaderboardRouter } from "./routes/leaderboard";
+import { contestsRouter } from "./routes/contests";
+import { compareRouter } from "./routes/compare";
+import { insightsRouter } from "./routes/insights";
+import { dashboardRouter } from "./routes/dashboard";
+import { competitionRouter } from "./routes/competition";
+import { challengesRouter } from "./routes/challenges";
 
 export function createApp() {
   const env = loadEnv();

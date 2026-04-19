@@ -1,9 +1,9 @@
 import cron from "node-cron";
 import nodemailer from "nodemailer";
-import { loadEnv } from "../config/env.js";
-import { User } from "../models/User.js";
-import { Friend } from "../models/Friend.js";
-import { buildFriendSnapshot } from "./friendSnapshot.js";
+import { loadEnv } from "../config/env";
+import { User } from "../models/User";
+import { Friend } from "../models/Friend";
+import { buildFriendSnapshot } from "./friendSnapshot";
 
 function createTransport() {
   const env = loadEnv();

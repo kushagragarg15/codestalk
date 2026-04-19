@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
 import rateLimit from "express-rate-limit";
-import { buildFriendSnapshot } from "../services/friendSnapshot.js";
+import { buildFriendSnapshot } from "../services/friendSnapshot";
 
 export const compareRouter = Router();
 

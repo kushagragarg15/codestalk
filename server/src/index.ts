@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import { loadEnv } from "./config/env.js";
-import { createApp } from "./app.js";
-import { scheduleReminders } from "./services/reminders.js";
+import { loadEnv } from "./config/env";
+import { createApp } from "./app";
+import { scheduleReminders } from "./services/reminders";
 
 async function main() {
   const env = loadEnv();

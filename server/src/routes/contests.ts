@@ -1,6 +1,6 @@
 import { Router } from "express";
 import rateLimit from "express-rate-limit";
-import { getUpcomingContests } from "../services/leetcodeService.js";
+import { getUpcomingContests } from "../services/leetcodeService";
 
 export const contestsRouter = Router();
 

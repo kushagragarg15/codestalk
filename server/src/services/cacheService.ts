@@ -1,5 +1,5 @@
-import { CachedLeetcodeData } from "../models/CachedLeetcodeData.js";
-import { loadEnv } from "../config/env.js";
+import { CachedLeetcodeData } from "../models/CachedLeetcodeData";
+import { loadEnv } from "../config/env";
 
 export async function getCached<T>(key: string): Promise<T | null> {
   const doc = await CachedLeetcodeData.findOne({ key, expiresAt: { $gt: new Date() } }).lean();

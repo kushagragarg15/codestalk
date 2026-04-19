@@ -1,8 +1,8 @@
 import type { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { loadEnv } from "../config/env.js";
-import type { UserDoc } from "../models/User.js";
-import { User } from "../models/User.js";
+import { loadEnv } from "../config/env";
+import type { UserDoc } from "../models/User";
+import { User } from "../models/User";
 
 export type AuthPayload = { sub: string };
 

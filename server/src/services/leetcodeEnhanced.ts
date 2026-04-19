@@ -1,5 +1,5 @@
-import { loadEnv } from "../config/env.js";
-import { getCached, setCached } from "./cacheService.js";
+import { loadEnv } from "../config/env";
+import { getCached, setCached } from "./cacheService";
 
 const ALFA_BASE = () => loadEnv().ALFA_LEETCODE_API_URL.replace(/\/$/, "");
 

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { Friend } from "../models/Friend.js";
-import { requireAuth } from "../middleware/requireAuth.js";
-import { buildFriendSnapshot } from "../services/friendSnapshot.js";
+import { Friend } from "../models/Friend";
+import { requireAuth } from "../middleware/requireAuth";
+import { buildFriendSnapshot } from "../services/friendSnapshot";
 
 export const insightsRouter = Router();
 insightsRouter.use(requireAuth);
